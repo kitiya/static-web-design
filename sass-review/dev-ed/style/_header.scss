@@ -1,0 +1,22 @@
+header {
+  @include flexCenter(column, $primaryBg);
+  height: 100vh;
+
+  button {
+    background: $primaryBtn;
+    color: $primaryText;
+    padding: 5px 15px;
+    margin: 0 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    display: block;
+
+    &:hover {
+      background: $secondarBtn;
+    }
+
+    &::after {
+      content: "!";
+    }
+  }
+}

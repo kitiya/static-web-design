@@ -1,0 +1,76 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+.container {
+  font-family: "Lato", sans-sarif;
+}
+header {
+  /*   background: teal; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.intro-title {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1s all ease-in-out;
+}
+
+.intro-title h2 {
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
+.intro-content {
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 5%;
+}
+
+.intro-text {
+  grid-column: 2/3;
+  padding: 10px 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 3s all ease-in-out;
+}
+
+.intro-display {
+  opacity: 1;
+  transform: translateY(0px);
+  background-color: salmon;
+}
+
+.intro-image {
+  width: 100%;
+  border: 7px double black;
+  border-radius: 5px;
+  margin-left: 10px;
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.intro-image-display {
+  opacity: 1;
+}
+
+.intro-image:hover {
+  animation: image-hover 1s infinite alternate;
+}
+
+@keyframes image-hover {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.95);
+  }
+}

@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: PoppinsLight, sans-serif;
+}
+
+@font-face {
+  font-family: PoppinsLight;
+  src: url("./fonts/Poppins-Light.ttf");
+}
+
+@font-face {
+  font-family: PoppinsRegular;
+  src: url("./fonts/Poppins-Regular.ttf");
+}
+
+/* Global */
+body {
+  color: #eee;
+  font-size: 16px;
+}
+
+.artist-container {
+  background-image: radial-gradient(#bb0075, #6f0045, #3c0025, #250017);
+  background-repeat: no-repeat;
+}
+
+nav {
+  min-height: 10vh;
+  width: 90%;
+  margin: auto;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  letter-spacing: 5px;
+}
+
+/* Page */
+.page {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+
+.bruno,
+.adele {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Page | Hero */
+.hero {
+  overflow: hidden;
+  height: 500px;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+}
+
+.hero a {
+  display: flex;
+}
+
+.hero img {
+  height: 500px;
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
+}
+
+.image-left {
+  transform: translate(0%, 10%);
+}
+
+.image-right {
+  transform: translate(0%, -10%);
+}
+
+.hero:hover .image-left,
+.hero:hover .image-right {
+  transform: translate(0%, 0%);
+}
+
+/* Page | Details */
+.details {
+  grid-column: 2/3;
+  align-self: end;
+  z-index: 1;
+}
+
+.details h1 {
+  font-size: 64px;
+  font-family: PoppinsRegular;
+}
+
+.details h2 {
+  font-size: 42px;
+  margin: 20px 0;
+}
+
+.details p {
+  font-size: 24px;
+  margin: 20px 0 50px 0;
+}
+
+/* Pages | numbers */
+.pages {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pages > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pages h3 {
+  font-size: 24px;
+  padding: 30px;
+}
+
+.pages svg {
+  cursor: pointer;
+  opacity: 0.5;
+  transform: scale(2);
+}
+
+.pages svg:hover {
+  animation: dot 0.5s ease-in-out infinite alternate;
+}
+.pages svg.active {
+  opacity: 1;
+}
+
+@keyframes dot {
+  0% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(3);
+  }
+}
+
+.lyrics-container {
+  background: #000;
+}
+
+/* ----- INFO.HTML ----- */
+.info-container {
+  color: #333;
+}
+
+/* Banner */
+.banner {
+  height: 50vh;
+  width: 100%;
+  position: relative;
+}
+
+.banner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.author {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  color: white;
+  text-shadow: 2px 2px 2px #555;
+  text-align: center;
+}
+
+.author h1 {
+  font-size: 54px;
+}
+
+.author h3 {
+  margin: 10px 0px;
+  font-size: 42px;
+}
+
+/* Lyric, Work */
+.lyric-wrapper,
+.work-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  padding: 80px 0px;
+}
+
+.lyric,
+.work-description {
+  width: 50%;
+}
+
+.lyric h3,
+.work-description h3 {
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+
+.lyric p,
+.work-description p {
+  padding: 20px 0;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.lyric-image {
+  height: 50%;
+  vertical-align: middle;
+  align-self: center;
+}
+
+.lyric-image img {
+  width: 100%;
+  height: auto;
+}
+
+.work-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+}
+
+.work-gallery img {
+  width: 100%;
+  padding: 1px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+  /* ----- INDEX.HTML ----- */
+  .page {
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: 2fr 1fr;
+    align-items: center;
+  }
+
+  .hero {
+    grid-column: 2/3;
+    height: auto;
+  }
+
+  .hero img {
+    max-height: 500px;
+    max-width: 1fr;
+  }
+
+  .details {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    text-align: center;
+  }
+
+  .details h1 {
+    font-size: 48px;
+  }
+
+  .details h2 {
+    font-size: 32px;
+  }
+
+  /* ----- INFO.HTML ----- */
+  .lyric-wrapper,
+  .work-wrapper {
+    flex-direction: column;
+  }
+
+  .lyric,
+  .work-description {
+    width: 100%;
+  }
+
+  .work-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .lyric-wrapper,
+  .work-wrapper {
+    padding: 30px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* ----- INDEX.HTML ----- */
+
+  .hero img {
+    height: 400px;
+  }
+
+  .details {
+    align-self: start;
+  }
+  .details h1 {
+    font-size: 38px;
+  }
+
+  .details h2 {
+    font-size: 28px;
+  }
+}
+
+.nav-open {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50vh;
+  background: white;
+  z-index: 1;
+  color: #250017;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 5%;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(-100%);
+}
+
+.contact {
+  grid-column: 2/3;
+}
+
+.nav-open h3 {
+  font-size: 28px;
+  padding-bottom: 40px;
+}
+
+.nav-open p {
+  font-size: 18px;
+}
+
+.social-links img {
+  padding: 0px 10px;
+}
+
+.logo,
+.menu {
+  z-index: 2;
+}
+
+.menu {
+  cursor: pointer;
+}
