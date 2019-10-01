@@ -8,15 +8,15 @@
 }
 
 @mixin mQuery($arg...) {
-  @if lenth($arg) == 1 {
-    @media screen and (max-widht: nth($arg, 1)) {
+  @if length($arg) == 1 {
+    @media screen and (max-width: nth($arg, 1)) {
       // 1st argument
       @content;
     }
   }
 
-  @if len($arg) == 2 {
-    @media screen and (max-widht: nth($arg, 1)) and (max-widht: nth($arg, 2)) {
+  @if length($arg) == 2 {
+    @media screen and (max-width: nth($arg, 1)) and (max-width: nth($arg, 2)) {
       @content;
     }
   }

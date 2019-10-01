@@ -244,6 +244,39 @@ nav .logo {
   border-radius: 5px;
 }
 
+/* bruno.html*/
+
+#bruno,
+#adele {
+  background: darkslategray;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+#bruno a,
+#adele a {
+  margin-top: 5rem;
+  font-size: 6rem;
+  color: white;
+  letter-spacing: 0.7rem;
+  text-decoration: none;
+  text-shadow: #aaa 2px 2px 5px;
+  margin: auto;
+}
+
+#bruno {
+  background: white url("./images/bruno-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#adele {
+  background: white url("./images/adele-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 @media screen and (max-width: 1024px) {
   /* ----- INDEX.HTML ----- */
   .page {
