@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Merriweather Sans", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Merriweather", serif;
+  letter-spacing: 0.2rem;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+main {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2f96a3), to(#2b5090));
+  background: linear-gradient(#2f96a3, #2b5090);
+  font-family: sans-serif;
+  color: #f7f7f7;
+}
+
+.location-section,
+.temperature-section {
+  height: 30vh;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.temperature-section {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.temperature-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+h2.temperature-degree {
+  font-size: 4rem;
+}
+
+.temperature-unit {
+  margin: 0.7rem;
+  font-size: 2rem;
+}
+/*# sourceMappingURL=style.css.map */

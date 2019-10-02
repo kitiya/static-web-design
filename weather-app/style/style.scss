@@ -1,0 +1,58 @@
+@import "./config.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Merriweather Sans", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Merriweather", serif;
+  letter-spacing: 0.2rem;
+  @include easeOut;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgb(47, 150, 163), rgb(43, 80, 144));
+  font-family: sans-serif;
+  color: $color-primary;
+}
+
+.location-section,
+.temperature-section {
+  height: 30vh;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.temperature-section {
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.temperature-wrapper {
+  display: flex;
+}
+
+h2.temperature-degree {
+  font-size: 4rem;
+}
+.temperature-unit {
+  margin: 0.7rem;
+  font-size: 2rem;
+}

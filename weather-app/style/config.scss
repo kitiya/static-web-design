@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans&display=swap");
+
+$color-primary: #f7f7f7;
+$color-secondary: #2b5090;
+$color-mango: #fcc720;
+$color-orange: #ec7201;
+$color-purple: #ab2375;
+$color-fuchsia: #c5367c;
+
+@mixin easeOut {
+  transition: all 0.3s ease-out;
+}
+
+@mixin bp-large {
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}
