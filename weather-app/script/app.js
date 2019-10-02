@@ -21,6 +21,7 @@ window.addEventListener("load", () => {
       const key = "c948009d63dea1a2c9dba97db6aa1f8d";
       const api = `${proxy}http://api.openweathermap.org/data/2.5/weather?appid=${key}&units=metric&lat=${lat}&lon=${lon}`;
 
+      console.log(api);
       fetch(api)
         .then(response => {
           return response.json();
