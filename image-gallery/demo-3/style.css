@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template:
+    "1fr 1fr 1fr 1fr 1fr" 30vh
+    "1fr 1fr 1fr 1fr 1fr" 30vh
+    "1fr 1fr 1fr 1fr 1fr" 30vh;
+  /* grid-gap: 5px; */
+}
+
+.container .box {
+  position: relative;
+  background: #777;
+}
+
+.container .box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .box.b1 {
+  grid-row: span 2;
+  background: salmon;
+}
+
+.container .box.b2,
+.container .box.b6,
+.container .box.b8,
+.container .box.b10 {
+  grid-column: span 2;
+  background-color: darkcyan;
+}
+
+.container .box.b3,
+.container .box.b7 {
+  background-color: blue;
+}
+
+@media (max-width: 991px) {
+  .container {
+    grid-template:
+      "1fr 1fr 1fr" 250px
+      "1fr 1fr 1fr" 250px
+      "1fr 1fr 1fr" 250px
+      "1fr 1fr 1fr" 250px
+      "1fr 1fr 1fr" 250px;
+  }
+  .container .box.b7 {
+    grid-column: span 2;
+  }
+  .container .box.b8 {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template:
+      "1fr 1fr" 250px
+      "1fr 1fr" 250px
+      "1fr 1fr" 250px
+      "1fr 1fr" 250px
+      "1fr 1fr" 250px
+      "1fr 1fr" 250px
+      "1fr 1fr" 250px;
+  }
+
+  .container .box.b7 {
+    grid-column: span 2;
+  }
+  .container .box.b8 {
+    grid-column: span 1;
+  }
+}
+
+/* https://www.youtube.com/watch?v=rzqdT69hUew */

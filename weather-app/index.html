@@ -9,19 +9,21 @@
   </head>
   <body>
     <main>
-      <section class="location-section">
-        <h1 class="location-timezone">City</h1>
-        <img class="location-icon" />
-      </section>
-      <section class="temperature-section">
-        <div class="temperature-wrapper">
-          <h2 class="temperature-degree">Temperature</h2>
-          <span class="temperature-unit">C</span>
-        </div>
-        <div class="temperature-description">Current Weather</div>
-      </section>
+      <div class="weather-current">
+        <section class="location-section">
+          <h1 class="location-city">City</h1>
+          <canvas class="location-icon" width="128" height="128"></canvas>
+        </section>
+        <section class="temperature-section">
+          <div class="temperature-wrapper">
+            <h2 class="temperature-degree">Temperature</h2>
+            <span class="temperature-unit">C</span>
+          </div>
+          <div class="temperature-description">Current Weather</div>
+        </section>
+      </div>
     </main>
-
+    <script src="script/skycons.js"></script>
     <script src="./script/app.js"></script>
   </body>
 </html>

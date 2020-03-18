@@ -80,4 +80,8 @@ h2.temperature-degree {
   margin: 0.7rem;
   font-size: 2rem;
 }
+
+.location-icon {
+  background: red;
+}
 /*# sourceMappingURL=style.css.map */
